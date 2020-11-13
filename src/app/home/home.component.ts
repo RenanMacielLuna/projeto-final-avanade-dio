@@ -25,11 +25,17 @@ export class HomeComponent implements OnInit {
   clicarEExibirComponenteFilho1() {
     this.exibirHomeComponent = !this.exibirHomeComponent;
     this.exibirFilho1 = true;
-    console.log(this.exibirFilho1);
+  }
+
+  clicarEExibirComponenteFilho2(){
+    this.exibirHomeComponent = !this.exibirHomeComponent;
+    this.exibirFilho2 = true;
   }
 
   voltar(evento) {
     this.exibirFilho1 = false;
+    this.exibirFilho2 = false;
+    this.exibirFilho3 = false;
     this.exibirHomeComponent = evento;
   }
 
