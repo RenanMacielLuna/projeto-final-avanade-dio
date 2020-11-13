@@ -1,0 +1,17 @@
+<div class="example-button-row" *ngIf="exibirHomeComponent">
+  <button mat-button color="primary" (click)="clicarEExibirComponenteFilho1()">Componente Filho 1</button>
+  <button mat-button color="primary">Componente Filho 2</button>
+  <button mat-button color="primary">Componente Filho 3</button>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput type="text" placeholder="Ex. Pizza" [(ngModel)]="textFilho1">
+  </mat-form-field>
+</div>
+
+<proj-final-filho1
+  [textFilho1] = "textFilho1"
+  [exibirFilho1] = "exibirFilho1"
+  (exibirHome) = "voltar($event)"
+>
+</proj-final-filho1>
