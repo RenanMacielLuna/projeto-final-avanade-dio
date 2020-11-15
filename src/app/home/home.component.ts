@@ -23,13 +23,22 @@ export class HomeComponent implements OnInit {
   }
 
   clicarEExibirComponenteFilho1() {
-    this.exibirHomeComponent = !this.exibirHomeComponent;
+    this.ocultarOuMostrarComponenteHome();
     this.exibirFilho1 = true;
   }
 
   clicarEExibirComponenteFilho2(){
-    this.exibirHomeComponent = !this.exibirHomeComponent;
+    this.ocultarOuMostrarComponenteHome();
     this.exibirFilho2 = true;
+  }
+
+  clicarEExibirComponenteFilho3(){
+    this.ocultarOuMostrarComponenteHome();
+    this.exibirFilho3 = true;
+  }
+
+  ocultarOuMostrarComponenteHome(){
+    this.exibirHomeComponent = !this.exibirHomeComponent;
   }
 
   voltar(evento) {

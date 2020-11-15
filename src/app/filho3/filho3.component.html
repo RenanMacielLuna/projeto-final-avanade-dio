@@ -1,1 +1,16 @@
-<p>filho3 works!</p>
+<div
+  *ngIf="exibirFilho3">
+  <label id="example-radio-group-label">Escolha a sua estação favorita</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="estacaoFavorita">
+    <mat-radio-button class="example-radio-button" *ngFor="let estacao of estacoes" [value]="estacao">
+      {{estacao}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div *ngIf="estacaoFavorita != ''">Sua estação favorita é {{estacaoFavorita}}</div>
+
+  <button mat-button color="primary" (click)="clicarVoltar($event)">Voltar para a página principal</button>
+</div>

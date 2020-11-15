@@ -14,7 +14,6 @@ export class Filho1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.textFilho1);
   }
 
   clicarVoltar(evento) {

@@ -8,11 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 import { Filho1Component } from './filho1/filho1.component';
 import { Filho2Component } from './filho2/filho2.component';
 import { Filho3Component } from './filho3/filho3.component';
+
+
 
 
 
@@ -31,7 +36,10 @@ import { Filho3Component } from './filho3/filho3.component';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

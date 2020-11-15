@@ -3,37 +3,39 @@
     <mat-label>Filtro</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
   </mat-form-field>
-  
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z12">
-    
+
       <ng-container matColumnDef="position">
         <th mat-header-cell *matHeaderCellDef> Posição </th>
         <td mat-cell *matCellDef="let elemento" > {{elemento.position}} </td>
       </ng-container>
-    
+
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Nome </th>
         <td mat-cell *matCellDef="let elemento" > {{elemento.name}} </td>
       </ng-container>
-    
+
       <ng-container matColumnDef="weight">
         <th mat-header-cell *matHeaderCellDef> Peso </th>
         <td mat-cell *matCellDef="let elemento" > {{elemento.weight}} </td>
       </ng-container>
-    
+
       <ng-container matColumnDef="symbol">
         <th mat-header-cell *matHeaderCellDef> Símbolo </th>
         <td mat-cell *matCellDef="let elemento" > {{elemento.symbol}} </td>
       </ng-container>
-    
+
       <tr mat-header-row *matHeaderRowDef="cabecalhoColunas"></tr>
       <tr mat-row *matRowDef="let row; columns: cabecalhoColunas;"></tr>
-    
+
       <tr class="mat-row" *matNoDataRow>
         <td class="mat-cell" colspan="4">Não há dados para o elemento "{{input.value}}"</td>
       </tr>
     </table>
-
-    <button mat-button color="primary" (click)="clicarVoltar($event)">Voltar</button>
+    <br>
+    <br>
+    <br>
+    <button mat-button color="primary" (click)="clicarVoltar($event)">Voltar para a página principal</button>
 
 </div>
