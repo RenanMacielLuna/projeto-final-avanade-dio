@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { PeriodicElement } from './service/PeriodicElement';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,7 +13,9 @@ export class Filho2Component implements OnInit {
   dadosTabela: PeriodicElement[] = [];
   cabecalhoColunas: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource: any;
-  @Input('exibirFilho2') exibirFilho2: boolean; 
+
+  @Input('exibirFilho2') exibirFilho2: boolean;
+  @Output('exibirHome') exibirHome = new EventEmitter();
 
   constructor() { }
 
@@ -40,6 +42,11 @@ export class Filho2Component implements OnInit {
   applyFilter(evento) {
     const filterValue = (evento.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  clicarVoltar(evento) {
+    this.exibirHome.emit(true);
+    this.exibirFilho2 = false;
   }
 
 }

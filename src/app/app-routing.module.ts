@@ -9,18 +9,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  },
-  {
-    path: 'filho1',
-    component: Filho1Component
-  },
-  {
-    path: 'filho2',
-    component: Filho2Component
-  },
-  {
-    path: 'filho3',
-    component: Filho3Component
   }
 ];
 
