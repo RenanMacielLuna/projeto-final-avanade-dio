@@ -2,11 +2,11 @@
   *ngIf="exibirFilho1"
 >
   <mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
+    <mat-label>Prato Favorito</mat-label>
     <input matInput type="text" placeholder="Ex. Pizza" [(ngModel)]="textFilho1">
   </mat-form-field>
   <span>Seu prato preferido é {{textFilho1}} </span>
-
+  <br>
   <button mat-button color="primary" (click)="clicarVoltar($event)">Voltar para a página principal</button>
 </div>
 
